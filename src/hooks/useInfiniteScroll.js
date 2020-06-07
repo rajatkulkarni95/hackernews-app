@@ -7,10 +7,14 @@ export const useInfiniteScroll = () => {
   const [count, setCount] = useState(STORY_INCREMENT);
 
   const handleScroll = debounce(() => {
+    console.log(
+      Math.round(window.innerHeight + document.documentElement.scrollTop)
+    );
+
+    console.log(document.documentElement.offsetHeight);
     if (
-      Math.round(
-        window.innerHeight + document.documentElement.scrollTop + 1
-      ) !== document.documentElement.offsetHeight ||
+      Math.round(window.innerHeight + document.documentElement.scrollTop) !==
+        document.documentElement.offsetHeight ||
       loading
     ) {
       return false;
@@ -29,12 +33,12 @@ export const useInfiniteScroll = () => {
     }
 
     setLoading(false);
-  }, [loading]);
+  }, [count, loading]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   return { count };
 };

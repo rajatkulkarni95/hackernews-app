@@ -5,6 +5,7 @@ import { selectFields } from "../utils/selectFields";
 const baseUrl = "https://hacker-news.firebaseio.com/v0/";
 const topStoriesUrl = `${baseUrl}topstories.json`;
 const storyUrl = `${baseUrl}item/`;
+//const newStoriesUrl = `${baseUrl}newstories.json`;
 
 export const getStory = async (storyId) => {
   const result = await axios
