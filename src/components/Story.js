@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from "react";
+import React, { useState, useEffect } from "react";
 import { getStory } from "../services/hackerNewsAPI";
 import {
   StoryWrapper,
