@@ -7,19 +7,18 @@ import {
 } from "../styles/StoryContainerStyles";
 import { useInfiniteScroll } from "../hooks/useInfiniteScroll";
 
-export const StoriesContainer = () => {
+export const StoriesContainer = ({ routeType }) => {
   const { count } = useInfiniteScroll();
   const [storyIds, setStoryIds] = useState([]);
 
   useEffect(() => {
-    getStoryIds().then((data) => setStoryIds(data));
-  }, []);
+    getStoryIds(routeType).then((data) => setStoryIds(data));
+  }, [routeType]);
 
   return (
     <>
       <GlobalStyle />
       <StoriesContainerWrapper data-test-id="stories-container">
-        <h1>Hacker News Stories</h1>
         {storyIds.slice(0, count).map((storyId) => (
           <Story key={storyId} storyId={storyId} />
         ))}
