@@ -1,31 +1,31 @@
 import styled from "styled-components";
 
-export const HeaderStyle = styled.header`
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  * {
-    display: inline;
-  }
-  ul li {
-    float: left;
-    list-style: none;
-    text-align: center;
-    background-color: #ffffff;
-    margin-right: 30px;
-    width: 150px;
-    line-height: 60px;
-  }
-  ul li a {
-    text-decoration: none;
-    color: #000000;
-    display: block;
+export const HeaderStyle = styled.nav`
+  nav {
+    display: flex;
   }
 
-  ul li a:hover {
+  ul {
+    display: flex;
+    margin-left: 50px;
+  }
+
+  li {
+    margin: 0 15px 0 0;
+    letter-spacing: 1.5;
+    font-size: 20px;
+    color: orangered;
+    border-bottom: 4px solid black;
+    list-style-type: none;
+  }
+
+  li:hover {
+    color: black;
+    border-bottom: 4px solid orangered;
+  }
+
+  a {
     text-decoration: none;
-    color: #000000;
-    background-color: #f8dc3d;
+    color: inherit;
   }
 `;

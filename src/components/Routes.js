@@ -12,21 +12,19 @@ export const Routes = () => {
   return (
     <Router>
       <HeaderStyle>
-        <header>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Top</Link>
-              </li>
-              <li>
-                <Link to="/best">Best</Link>
-              </li>
-              <li>
-                <Link to="/new">New</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Top</Link>
+            </li>
+            <li>
+              <Link to="/best">Best</Link>
+            </li>
+            <li>
+              <Link to="/new">New</Link>
+            </li>
+          </ul>
+        </nav>
       </HeaderStyle>
       <Switch>
         <Route path="/best">
