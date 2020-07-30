@@ -19,10 +19,7 @@ export const Story = ({ storyId }) => {
   return story && story.url ? (
     <StoryWrapper data-testid="story">
       <StoryTitle>
-        <a href={story.url} target="_blank">
-          {" "}
-          {story.title}
-        </a>
+        <a href={story.url}> {story.title}</a>
       </StoryTitle>
       <StoryMeta>
         <span className="story__likes" data-testid="story-likes">
