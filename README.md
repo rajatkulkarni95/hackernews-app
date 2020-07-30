@@ -6,7 +6,7 @@
   <a href="https://reacthackernews.netlify.app">Visit the live app</a> |
 </h3>
 
-![App screenshot](./assets/Screen.PNG)
+![App screenshot](./assets/Home.PNG)
 
 <div align='left'>
     <h3>Libraries Used</h3>
